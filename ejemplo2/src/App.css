@@ -1,0 +1,167 @@
+/* Asegúrate de que la página ocupe toda la altura de la pantalla */
+html, body, #root, .App {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estructura principal con Flexbox para usar todo el espacio disponible */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header: Ajustar el menú de navegación sin viñetas */
+header {
+  background-color: #478e97;
+  padding: 10px;
+  flex-shrink: 0; /* Evita que se reduzca en pantallas pequeñas */
+}
+
+/* Estilo para el nav */
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none; /* Elimina las viñetas de la lista */
+  padding: 0; /* Elimina padding por defecto */
+  margin: 0; /* Elimina márgenes */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  scale: 2sem all;
+  transition: background-color 1.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #f5f3eb; /* Cambia de color al pasar el cursor */
+  transform: scale(10); /* Duplica el tamaño del elemento */
+  transition: transform 1.5s ease; /* Aplica una transición suave */
+  transition: background-color 1.3s ease;
+  scale: 2sem all;
+  opacity: 3;
+}
+
+/* Galería de tatuajes y artistas con Flexbox */
+.tattoo-gallery, .artist-gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-grow: 1; /* Para que ocupe el espacio restante */
+  padding: 20px;
+}
+
+.tattoo-card, .artist-card {
+  width: 200px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Ajustar el tamaño de la imagen para que se mantenga dentro del contenedor */
+.tattoo-card img, .artist-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Footer siempre en la parte inferior */
+footer {
+  background-color: #478e97;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+footer .social-media a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Ajustes responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tattoo-card, .artist-card {
+    width: calc(50% - 10px); /* Dos columnas en tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .tattoo-card, .artist-card {
+    width: 100%; /* Una columna en móviles */
+  }
+}
+
+.artists,.gallery,.booking{
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-bottom: 5%;
+  justify-content: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.Titulos{
+text-align: center;
+font-family: 'Pirata One', cursive;
+color: #333;
+font-size: 50px;
+}
+
+.letra{
+  font-family: 'Pirata One', cursive;
+  font-size: 25px;
+}
+
+.social-media{
+  margin: 0;
+  padding: 0;
+}
+
+.Contenido{
+  width: 80%;
+  height: 50%;
+  background-color: #478e97;
+}
+
+.booking{
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking input, .booking select
+ {
+  width: 100%;        /* Ajusta el ancho de los inputs al 100% de su contenedor */
+  padding: 1px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 5%;
+}
+
+ label :hover{
+  transform: scale(1.5); /* Duplica el tamaño del elemento */
+  transition: transform 1.2s ease; /* Aplica una transición suave */
+  transition: background-color 3.3s ease;
+  scale: 2sem all;
+  opacity: 1;
+  border-color: aquamarine;
+}
+
+.Contenido button{
+  margin: 3%;
+}
+
